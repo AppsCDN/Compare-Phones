@@ -64,13 +64,13 @@ public class MainActivity extends Activity {
 		interstitial.loadAd(adRequest);
 			
 		listView = (ListView)findViewById(R.id.popPhoneListView);
-    	buttonPhone1 = (Button)findViewById(R.id.phone1Title);
-    	buttonPhone2 = (Button)findViewById(R.id.phone2Title);
-    	browseButton = (Button)findViewById(R.id.browseButton);
-    	compareButton = (Button)findViewById(R.id.compareButton);
-    	mainView = (LinearLayout)findViewById(R.id.mainView);
-    	
-    	currentPhone = PHONE_ONE;
+		buttonPhone1 = (Button)findViewById(R.id.phone1Title);
+		buttonPhone2 = (Button)findViewById(R.id.phone2Title);
+		browseButton = (Button)findViewById(R.id.browseButton);
+		compareButton = (Button)findViewById(R.id.compareButton);
+		mainView = (LinearLayout)findViewById(R.id.mainView);
+
+		currentPhone = PHONE_ONE;
 
 		setTouchListeners();
 
@@ -150,7 +150,7 @@ public class MainActivity extends Activity {
 	/* setPhoneName()
 	*
 	*  Changes a phone button's string.
-    */
+	*/
 	private void setPhoneName(int currentPhone, String phoneName) {
 		switch(currentPhone) {
 			case PHONE_ONE:
