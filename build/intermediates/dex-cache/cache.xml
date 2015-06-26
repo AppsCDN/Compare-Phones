@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-e2f58b0d6e427ac6d6bcdcb4ac8ccbf8f925c094.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-5c325cc911d58feeed4cc5f92ec492a830cc2fe5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-5f28fa020b96cd044783cc24665c0392a54d929f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-09af0cae2aca82e704802c78994adf564c180170.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-eab0428cbf9bbb978ca488dce680329fd0a364bf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-c9ff5263ed4308930febf0ab871be56899a8ae46.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-367dd4522c30af4b98d8733de03d90964160d226.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-8ed3e88148a8fdd6f9f64d7c2ddd3af3015bbbde.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-671d66e4d7b4c05ba72526ba0e54254cd7b858b4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-64dc3e5e99157b1620231e27ecc15702dd7be316.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-ab037493673b1069b91ab3da37648cd3f118d96a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-963d8a67bf3845bb13e014e16d0ce5eb8f7fdaf2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="565a01f90f1529f73362707c4c185d0623a68782">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-a0da73eafe1400fb50d85f24af5449f77540c356.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-29ae67fcda9ff21a1c155e4dfe78bc62f489f68b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-dbb08e1cf52c58f17b5fe46933c29e7c9ba10cd0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-b1d90a1b553c5d13925b261c848dc5db1353bb57.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-2307d611887c9b19bb0452e7ba38c2f7fcae2ea5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-b4f3358cc13090cb393a17f3a1aef7bcc5ae5dbb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-d61b4160adf5fd873ab4666b695561e2041c8f04.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-38261dc747607c73f1751dfddcff0ec80daa4ab1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-007ae5fba67dd91a81f389fe943abc2194b7f52b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-b3f69445366945a3101eb47a167bc06c076054e0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="C:\Users\Home744\StudioProjects\phoneCompare2\app\build\intermediates\pre-dexed\debug\classes-426d1a938610a9173396a072fd0396a7b636f3c0.jar" />
+    </item>
+
+</items>

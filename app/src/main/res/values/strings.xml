@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">phoneCompare</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="splash_title">phoneCompare</string>
+    <string name="title_activity_browse">Browse Phones</string>
+    <string name="title_activity_compare">Compare Phones</string>
+    <string name ="phone1_title">Apple iPhone 5c</string>
+    <string name ="phone2_title">LG Nexus 5</string>
+    <string name ="browse_phones_text">Browse</string>
+    <string name ="compare_phones_text">Compare</string>
+    <string name ="popular_phones_text">Popular Phones</string>
+    <string name ="browse_phone_queryhint">eg. iPhone or spacebar for all that meet criteria</string>
+    <string name="hello">Hello World, SearchViewActivity!</string>
+    <string name="attribute">Attribute</string>
+    <string name="phone_img_desc">Image of a phone.</string>
+
+    
+    <string name ="android">Android</string>
+    <string name ="ios">iOS</string>
+    <string name ="bbos">BlackBerry OS</string>
+    <string name ="winos">Windows OS</string>
+    <string name ="otheros">Other OS</string>
+    
+    <string name ="samsung">Samsung</string>
+    <string name ="htc">HTC</string>
+    <string name ="apple">Apple</string>
+    <string name ="blackberry">Blackberry</string>
+    <string name ="nokia">Nokia</string>
+    <string name ="motorola">Motorola</string>
+    <string name ="sony">Sony</string>
+    <string name ="lg">LG</string>
+    
+    <string name ="smallscreen">Small (0 to 4 in.)</string>
+    <string name ="medscreen">Medium (4 to 5 in.)</string>
+    <string name ="largescreen">Large (5+ in.)</string>
+
+</resources>

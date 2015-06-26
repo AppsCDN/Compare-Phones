@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="android_blue">#33B5E5</color>
+    <color name="android_darkblue">#0099CC</color>
+    
+	<color name="gray_clicked">#4A4A4A</color>
+	<color name="gray_unclicked">#353535</color>
+	
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    
+    <color name="darkgray">#282828</color>
+    <color name ="darkgray_browselist">#303030</color>
+    
+</resources>

@@ -1,0 +1,318 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    tools:context=".BrowseActivity" 
+    android:background="@color/darkgray">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center" > 
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            >
+            
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:textSize="22sp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:queryHint="@string/browse_phone_queryhint"
+                android:iconifiedByDefault="false"
+                android:paddingBottom="10dp"
+                >
+            </SearchView>
+            
+            <TabHost
+	            android:id="@+id/tabHost"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_below="@+id/searchView">
+	
+	            <LinearLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical" >
+	
+	                <TabWidget
+	                    android:id="@android:id/tabs"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content" >
+	                </TabWidget>
+	
+	                <FrameLayout
+	                    android:id="@android:id/tabcontent"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="match_parent" >
+	                    <LinearLayout
+	                        android:id="@+id/tab1"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="wrap_content"
+	                        android:orientation="vertical">
+							
+	                        <LinearLayout 
+								android:id="@+id/opSysButtons1"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal" 
+								android:gravity="center" 
+								android:paddingTop="20dp"
+								android:paddingBottom="4dp">
+								<ToggleButton
+									android:id="@+id/toggleAndroid"
+									android:layout_width="0dp"
+									android:layout_weight=".2"
+									android:layout_height="wrap_content"
+									android:textOn="@string/android" 
+									android:textOff="@string/android"
+									android:checked="true"/>
+								<ToggleButton
+									android:id="@+id/toggleiOS"
+									android:layout_width="0dp"
+									android:layout_weight=".2"
+									android:layout_height="wrap_content"
+									android:textOn="@string/ios" 
+									android:textOff="@string/ios"
+									android:checked="true"/>
+								<ToggleButton
+									android:id="@+id/toggleBBOS"
+									android:layout_width="0dp"
+									android:layout_weight=".2"
+									android:layout_height="wrap_content"
+									android:textOn="@string/bbos" 
+									android:textOff="@string/bbos"
+									android:checked="true"/>
+							</LinearLayout>
+							
+							<LinearLayout 
+								android:id="@+id/opSysButtons2"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal" >
+								<ToggleButton
+									android:id="@+id/toggleWinOS"
+									android:layout_weight=".2"
+									android:layout_width="0dp"
+									android:layout_height="wrap_content"
+									android:textOn="@string/winos" 
+									android:textOff="@string/winos" 
+									android:checked="true"/>
+								<ToggleButton
+									android:id="@+id/toggleOtherOS"
+									android:layout_weight=".2"
+									android:layout_width="0dp"
+									android:layout_height="wrap_content"
+									android:textOn="@string/otheros" 
+									android:textOff="@string/otheros" 
+									android:checked="true"/>
+							</LinearLayout>
+	                    </LinearLayout>
+	
+	
+	                    <LinearLayout
+	                        android:id="@+id/tab2"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="wrap_content"
+	                        android:orientation="vertical" >
+	                        <LinearLayout 
+								android:id="@+id/manuButtonsRow1"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal" 
+								android:paddingTop="20dp">
+								<ToggleButton
+									android:id="@+id/toggleSamsung"
+									android:layout_width="0dp"
+									android:layout_weight=".2"
+									android:layout_height="wrap_content"
+									android:textOn="@string/samsung" 
+									android:textOff="@string/samsung"
+									android:checked="true"/>
+								<ToggleButton
+									android:id="@+id/toggleHTC"
+									android:layout_weight=".2"
+									android:layout_width="0dp"
+									android:layout_height="wrap_content"
+									android:textOn="@string/htc" 
+									android:textOff="@string/htc" 
+									android:checked="true"/>
+								<ToggleButton
+									android:id="@+id/toggleApple"
+									android:layout_width="0dp"
+									android:layout_weight=".2"
+									android:layout_height="wrap_content"
+									android:textOn="@string/apple" 
+									android:textOff="@string/apple" 
+									android:checked="true"/>
+							</LinearLayout>
+							
+							<LinearLayout 
+								android:id="@+id/manuButtonsRow2"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal" >
+								<ToggleButton
+									android:id="@+id/toggleBlackBerry"
+									android:layout_weight=".2"
+									android:layout_width="0dp"
+									android:layout_height="wrap_content"
+									android:textOn="@string/blackberry" 
+									android:textOff="@string/blackberry" 
+									android:checked="true"/>
+								<ToggleButton
+									android:id="@+id/toggleNokia"
+									android:layout_weight=".2"
+									android:layout_width="0dp"
+									android:layout_height="wrap_content"
+									android:textOn="@string/nokia" 
+									android:textOff="@string/nokia" 
+									android:checked="true"/>	
+								<ToggleButton
+									android:id="@+id/toggleMotorola2"
+									android:layout_width="0dp"
+									android:layout_weight=".2"
+									android:layout_height="wrap_content"
+									android:textOn="@string/motorola" 
+									android:textOff="@string/motorola"
+									android:checked="true"/>
+							</LinearLayout>
+							
+							<LinearLayout 
+								android:id="@+id/manuButtonsRow3"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+								
+								<ToggleButton
+									android:id="@+id/toggleSony"
+									android:layout_weight=".2"
+									android:layout_width="0dp"
+									android:layout_height="wrap_content"
+									android:textOn="@string/sony" 
+									android:textOff="@string/sony" 
+									android:checked="true"/>
+								<ToggleButton
+									android:id="@+id/toggleLG"
+									android:layout_width="0dp"
+									android:layout_weight=".2"
+									android:layout_height="wrap_content"
+									android:textOn="@string/lg" 
+									android:textOff="@string/lg" 
+									android:checked="true"/>
+							</LinearLayout>
+	                  	</LinearLayout>
+	                  	
+	                    <LinearLayout
+	                     android:id="@+id/tab3"
+	                     android:layout_width="match_parent"
+	                     android:layout_height="match_parent"
+	                     android:orientation="vertical">
+		                     <LinearLayout 
+								android:id="@+id/screenSizeButtons1"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal" 
+								android:paddingTop="20dp">
+						
+								<ToggleButton
+									android:id="@+id/toggleSmall"
+									android:layout_width="0dp"
+									android:layout_weight=".3"
+									android:layout_height="wrap_content"
+									android:textOn="@string/smallscreen" 
+									android:textOff="@string/smallscreen"
+									android:checked="true"/>
+								
+								<ToggleButton
+									android:id="@+id/toggleMedium"
+									android:layout_weight=".3"
+									android:layout_width="0dp"
+									android:layout_height="wrap_content"
+									android:textOn="@string/medscreen" 
+									android:textOff="@string/medscreen" 
+									android:checked="true"/>
+							</LinearLayout>
+							
+							<LinearLayout 
+								android:id="@+id/screenSizeButtons2"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal" 
+								android:gravity="center" 
+								android:paddingBottom="15dp">
+						
+								<ToggleButton
+									android:id="@+id/toggleLarge"
+									android:layout_width="0dp"
+									android:layout_weight=".3"
+									android:layout_height="wrap_content"
+									android:textOn="@string/largescreen" 
+									android:textOff="@string/largescreen" 
+									android:checked="true"/>
+							</LinearLayout>
+							<TextView 
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textColor="#FFFFFF"
+								android:text="(At least one selected)"
+								android:textSize="20sp"
+								android:layout_gravity="center_horizontal"/>
+	                  	 </LinearLayout>
+	                 </FrameLayout>
+	            </LinearLayout>
+	        </TabHost>
+            
+            
+	        
+        	<LinearLayout
+        	    android:layout_width="match_parent"
+               	android:layout_height="300dp"
+               	android:layout_below="@+id/searchView"
+               	android:id="@+id/llSearch" 
+               	android:background="@android:color/transparent"> 
+		        <LinearLayout 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal" >
+	                
+	             	<View 
+	             	    android:layout_height= "wrap_content"
+	             	    android:layout_width="0dp"
+	             	    android:layout_weight ="0.08"/>   
+	             	      
+	            	<ListView 
+		                android:layout_width="0dp"
+		                android:layout_weight= "0.907"
+		                android:layout_height="wrap_content"
+		                android:background = "@color/darkgray_browselist" 
+		                android:cacheColorHint="@color/darkgray_browselist"
+		                android:id="@+id/list"
+		                android:fadeScrollbars="false"
+		                android:scrollbarThumbVertical="@drawable/scrollbar"
+		                android:scrollbarSize="4dp"
+		                />
+	            	
+	            	<View 
+	             	    android:layout_height= "wrap_content"
+	             	    android:layout_width="0dp"
+	            	    android:layout_weight ="0.013"/>  
+	           	</LinearLayout>
+           	</LinearLayout>
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+</LinearLayout>

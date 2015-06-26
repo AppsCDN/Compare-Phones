@@ -1,0 +1,200 @@
+package com.user.phoneCompare;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import com.user.phoneCompare.R;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.view.MotionEvent;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
+
+
+public class MainActivity extends Activity {
+	String currentElement = "";
+	private ListView mListView;
+	private Button element1Button;
+	private Button element2Button;
+	private Button browseButton;
+	private Button compareButton;
+	private LinearLayout mainView;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.activity_main);
+		//Set action bar blue
+		getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#33B5E5")));
+			
+		mListView = (ListView)findViewById(R.id.popPhoneListView);
+    	element1Button = (Button)findViewById(R.id.element1Title);
+    	element2Button = (Button)findViewById(R.id.element2Title);
+    	browseButton = (Button)findViewById(R.id.browseButton);
+    	compareButton = (Button)findViewById(R.id.compareButton);
+    	mainView = (LinearLayout)findViewById(R.id.mainView);
+    	
+    	currentElement = "Element 1";
+    	
+    	element1Button.setOnTouchListener(new OnTouchListener() {
+     	   public boolean onTouch (View v, MotionEvent event) {
+     		   	
+ 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
+ 					element1Button.setBackgroundColor(0xFF606060);
+ 				}
+ 				
+ 				else if (event.getAction() == MotionEvent.ACTION_UP) {		
+ 					element1Button.setBackgroundColor(0xFF4A4A4A);
+ 					element2Button.setBackgroundColor(0xFF353535);
+ 					
+ 				}
+ 				currentElement = "Element 1";
+ 				return true;
+     	   }
+        });
+    	
+    	element2Button.setOnTouchListener(new OnTouchListener() {
+     	   public boolean onTouch (View v, MotionEvent event) {
+
+ 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
+ 					element2Button.setBackgroundColor(0xFF606060);
+ 				}
+ 				
+ 				else if (event.getAction() == MotionEvent.ACTION_UP) {
+ 					element2Button.setBackgroundColor(0xFF4A4A4A);
+ 					element1Button.setBackgroundColor(0xFF353535);
+ 				}
+ 				currentElement = "Element 2";
+ 				return true;
+     	   }
+        });
+    	
+    	browseButton.setOnTouchListener(new OnTouchListener() {
+      	   public boolean onTouch (View v, MotionEvent event) {
+
+  				if (event.getAction() == MotionEvent.ACTION_DOWN) {
+  					//lightblue
+  					//6DDAEC is lightblue
+  					browseButton.setBackgroundColor(0xFF6DDAEC);
+  				}
+  				
+  				else if (event.getAction() == MotionEvent.ACTION_UP) {
+  					//androidblue
+  					//33B5E5 is androidblue
+  					browseButton.setBackgroundColor(0xFF0099CC);
+  					browse(mainView);
+  				}
+  				return true;
+      	   }
+         });
+    	
+    	compareButton.setOnTouchListener(new OnTouchListener() {
+      	   public boolean onTouch (View v, MotionEvent event) {
+
+  				if (event.getAction() == MotionEvent.ACTION_DOWN) {
+  					//lightblue
+  					compareButton.setBackgroundColor(0xff6DDAEC);
+  				}
+  				
+  				else if (event.getAction() == MotionEvent.ACTION_UP) {
+  					//androidblue
+  					compareButton.setBackgroundColor(0xff33B5E5);
+  					compare(mainView);
+  				}
+  				return true;
+      	   }
+         });
+    	
+
+        ArrayList<String> elements = new ArrayList<String>();
+        elements.add("LG Nexus 5");
+        elements.add("LG G2");
+        elements.add("Apple iPhone 5c");
+        elements.add("Apple iPhone 5s");
+        elements.add("Samsung Galaxy S5");
+        elements.add("Samsung Galaxy Note 3");
+        elements.add("HTC One (M8)");
+        elements.add("HTC One");
+        elements.add("BlackBerry Z30");
+        elements.add("BlackBerry Z10");
+        elements.add("BlackBerry Q10");
+        elements.add("Motorola Moto X");
+        elements.add("Motorola DROID Maxx");
+        elements.add("Motorola DROID Ultra");
+        elements.add("Sony Xperia Z1");
+        
+		PopElementAdapter popElements = new PopElementAdapter(this, elements);
+		
+		if (popElements != null)
+		{
+			mListView.setAdapter(popElements);
+			mListView.setOnItemClickListener(new OnItemClickListener() {
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
+				{
+					String elementName = (String)mListView.getItemAtPosition(position);
+					if (currentElement.equals("Element 1")) {
+						element1Button.setText(elementName);
+					}
+					
+					//(else if) in case > 2 phones in the future
+					else if (currentElement.equals("Element 2")) {
+						element2Button.setText(elementName);					
+					}				
+				}
+			});
+		}
+	}
+
+	public void browse(View view) {
+		Intent browseIntent = new Intent(this, BrowseActivity.class);
+		startActivityForResult(browseIntent, 42);
+	}
+	
+	public void compare(View view) {
+		Intent compareIntent = new Intent(this, CompareActivity.class);
+		TextView element1TV = (TextView)findViewById(R.id.element1Title);
+		TextView element2TV = (TextView)findViewById(R.id.element2Title);
+		
+		String phone1 = element1TV.getText().toString();
+		String phone2 = element2TV.getText().toString();
+		
+		compareIntent.putExtra("Phones", new String[]{phone1, phone2});
+		startActivity(compareIntent);
+	}
+	
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+		if (requestCode == 42 && resultCode == Activity.RESULT_OK)
+		{
+			String elementName = data.getStringExtra("Phone");
+			if (currentElement.equals("Element 1"))
+			{
+				element1Button.setText(elementName);
+			}
+			
+			else if (currentElement.equals("Element 2"))
+			{
+				element2Button.setText(elementName);
+			}
+		}
+	}
+	
+	
+
+}

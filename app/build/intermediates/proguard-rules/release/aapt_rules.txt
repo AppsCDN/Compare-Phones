@@ -1,0 +1,15 @@
+# view AndroidManifest.xml #generated:57
+-keep class com.google.android.gms.ads.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:42
+-keep class com.user.comparePhones.BrowseActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.user.comparePhones.CompareActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:38
+-keep class com.user.comparePhones.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:26
+-keep class com.user.comparePhones.SplashScreen { <init>(...); }
+

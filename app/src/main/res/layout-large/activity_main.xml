@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity" 
+    android:background="@color/darkgray"
+    android:padding="20dp">
+    
+    <LinearLayout
+       android:id="@+id/phoneTitlesll"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center" > 
+	    <Button
+	        android:id="@+id/phone1Title"
+	        android:layout_width="0dp"
+	        android:layout_weight="0.5"
+	        android:layout_height="match_parent"
+	        android:text="@string/phone1_title" 
+	        android:gravity="center"
+	        android:textSize="20sp" 
+	        android:background="@color/gray_clicked"
+	        android:padding="12dp"
+	        android:fontFamily="sans-serif-light"/>
+	    <Button
+	        android:id="@+id/phone2Title"
+	        android:layout_width="0dp"
+	        android:layout_weight="0.5"
+	        android:layout_height="match_parent"
+	        android:text="@string/phone2_title" 
+	        android:gravity="center"
+	        android:textSize="20sp" 
+	        android:background="@color/gray_unclicked"
+	        android:padding="12dp"
+	        android:fontFamily="sans-serif-light"/>
+    </LinearLayout>
+    
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center" 
+       android:paddingTop="20dp"
+       android:paddingBottom="10dp"> 
+	
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="0dp"
+	        android:layout_weight="0.5"
+	        android:layout_height="wrap_content"
+	        android:text="@string/popular_phones_text"
+	        android:gravity="center"
+	        android:textSize="20sp" />
+    </LinearLayout>
+    
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="0.7"
+       android:orientation="vertical"
+       android:gravity="center" 
+       android:background="@color/gray_clicked"
+       android:padding="10dp"> 
+	    <ListView
+	        android:id="@+id/popPhoneListView"
+	        android:layout_width="match_parent"
+	        android:layout_weight="0.80"
+	        android:layout_height="0dp" 
+	        android:drawSelectorOnTop="true">
+	    </ListView>
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_weight="0.08"
+	        android:layout_height="0dp">
+	    </LinearLayout>
+	    
+	    <Button
+	        android:id="@+id/browseButton"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:text="@string/browse_phones_text"
+			android:textSize="20sp" 
+			android:background="@color/android_darkblue"
+			android:fontFamily="sans-serif-light"/>
+    </LinearLayout>      
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:orientation="horizontal"
+        android:gravity="top" >
+    </LinearLayout>
+	<Button
+	    android:id="@+id/compareButton"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/compare_phones_text"
+	    android:textSize="26sp" 
+	    android:background="@color/android_blue"
+	    android:fontFamily="sans-serif-light"/>
+</LinearLayout>

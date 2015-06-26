@@ -1,0 +1,90 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+	<TableLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    tools:context=".CompareActivity" >
+	    <TableRow 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="#FFFFFF">
+	        <ImageView
+	            android:id="@+id/comparePhoneImg1"
+	            android:layout_width="0dp"
+	            android:layout_weight="0.35"
+	            android:layout_height="match_parent"
+	            android:contentDescription="@string/phone_img_desc"
+	            android:scaleType="fitCenter" 
+	            android:padding="10dp"/>
+    	    <LinearLayout
+		        android:layout_width="0dp"
+	            android:layout_weight="0.30"
+	            android:layout_height="120dp">
+	    	</LinearLayout>
+	        
+	        <ImageView
+	            android:id="@+id/comparePhoneImg2"
+	            android:layout_width="0dp"
+	            android:layout_weight="0.35"
+	            android:layout_height="match_parent"
+	            android:contentDescription="@string/phone_img_desc"
+	            android:scaleType="fitCenter"
+	            android:padding="10dp"/>
+	        </TableRow>
+	</TableLayout>
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" 
+        android:orientation="horizontal"
+        android:paddingBottom="6dp">
+	    <TextView
+	        android:id="@+id/phoneName1"
+	        android:layout_width="0dp"
+            android:layout_weight="0.35"
+            android:layout_height="match_parent"
+            android:text="N/A"
+            android:gravity="center"
+            android:textColor="#EE363636">
+	    </TextView>
+	    
+	    <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/android_darkblue"
+            android:text="@string/attribute"
+            />
+	    <TextView
+	        android:id="@+id/phoneName2"
+	        android:layout_width="0dp"
+            android:layout_weight="0.35"
+            android:layout_height="match_parent"
+            android:text="N/A"
+            android:gravity="center"
+            android:textColor="#EE363636">
+	    </TextView>
+    </LinearLayout>
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/android_blue" >
+    </LinearLayout>
+	
+	<ListView
+	    android:id="@+id/compareListView"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:divider="@color/black"
+	    android:dividerHeight="1dp">
+	</ListView>
+</LinearLayout><!-- From: file:/C:/Users/Home744/StudioProjects/phoneCompare2/app/src/main/res/layout/activity_compare.xml -->
