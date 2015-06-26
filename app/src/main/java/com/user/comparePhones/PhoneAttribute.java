@@ -2,12 +2,12 @@ package com.user.comparePhones;
 
 public class PhoneAttribute {
 	public String attribute;
-	public String phone1attribute;
-	public String phone2attribute;
+	public String data1;
+	public String data2;
 	
-	public PhoneAttribute(String attribute, String phone1attribute, String phone2attribute) {
+	public PhoneAttribute(String attribute, String data1, String data2) {
 		this.attribute = attribute;
-		this.phone1attribute = phone1attribute;
-		this.phone2attribute = phone2attribute;
+		this.data1 = data1;
+		this.data2 = data2;
 	}
 }
