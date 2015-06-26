@@ -1,49 +1,54 @@
 package com.user.comparePhones;
 
-//Takes the names from the database and makes the names prettier for the view
+/* AttFilter
+ *
+ * Filters raw data from the database into presentable data for the user
+ */
 public class AttFilter {
+
+	/* String filterChars(String desc, String attribute)
+	 *
+	 * Fixes an odd sequence of chars that pops up in the dimensions column of
+	 * the database.
+	 */
+	public static String filterChars(String desc, String attribute) {
+		return desc.replace("&#", "x ");
+	}
+
+	/* String makeAttPresentable(String attribute)
+	 *
+	 * Fixes some attribute names because the raw string from the database column
+	 * header might not have a space if there are more than 2 words.
+	 */
 	public static String makeAttPresentable(String attribute) {
-		if (attribute.equals("CurrentStatus")) {
-			return "Current Status";
-		} else if (attribute.equals("DisplaySize")) {
-			return "Display Size";
-		} else if (attribute.equals("FirstCamera")) {
-			return "First Camera";
-		} else if (attribute.equals("SecondCamera")) {
-			return "Second Camera";
-		} else if (attribute.equals("Cardslot")) {
-			return "Card Slot";
-		} else if (attribute.equals("InternalMemory")) {
-			return "Internal Memory";
-		} else if (attribute.equals("BatteryType")) {
-			return "Battery Type";
-		} else if (attribute.equals("Standby")) {
-			return "Standby Time";
-		} else if (attribute.equals("TalkTime")) {
-			return "Talk Time";
-		} else if (attribute.equals("Musicplay")) {
-			return "Music Play Time";
-		} else if (attribute.equals("USBPort")) {
-			return "USB Port";
-		} else if (attribute.equals("Camerafeatures")) {
-			return "Camera Features";
-		} else if (attribute.equals("EUROPrice")) {
-			return "Price (EURO)";
-		} else if (attribute.equals("USDPrice")) {
-			return "Price (USD)";
+		switch (attribute) {
+			case "CurrentStatus":
+				return "Current Status";
+			case "DisplaySize":
+				return "Display Size";
+			case "FirstCamera":
+				return "First Camera";
+			case "SecondCamera":
+				return "Second Camera";
+			case "Cardslot":
+				return "Card Slot";
+			case "InternalMemory":
+				return "Internal Memory";
+			case "BatteryType":
+				return "Battery Type";
+			case "Standby":
+				return "Standby Time";
+			case "TalkTime":
+				return "Talk Time";
+			case "Musicplay":
+				return "Music Play Time";
+			case "USBPort":
+				return "USB Port";
+			case "Camerafeatures":
+				return "Camera Features";
+			case "EUROPrice":
+				return "Price (EURO)";
 		}
 		return attribute;
-	}
-	
-	public static String filterChars(String desc, String attribute) {
-		if (attribute.equals("Price (EURO)")) {
-			return desc;
-		}
-		if (attribute.equals("Price (USD)")) {
-			return "$" + desc;
-		}
-		
-		desc.replace("&#", "x ");
-		return desc;
 	}
 }
