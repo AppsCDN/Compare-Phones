@@ -102,10 +102,10 @@ public class CompareActivity extends Activity {
 
 	private void setAttributes(boolean arePhonesInOrder, int phoneIndex, int i, String cursorString) {
 		if ((arePhonesInOrder && phoneIndex == 0) || (!arePhonesInOrder && phoneIndex != 0)) {
-			attributeArray.get(i).phone1attribute =
+			attributeArray.get(i).data1 =
 					AttFilter.filterChars(cursorString, attributeArray.get(i).attribute);
 		} else {
-			attributeArray.get(i).phone2attribute =
+			attributeArray.get(i).data2 =
 					AttFilter.filterChars(cursorString, attributeArray.get(i).attribute);
 		}
 	}
