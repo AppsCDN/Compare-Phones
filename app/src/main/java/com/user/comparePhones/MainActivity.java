@@ -89,10 +89,10 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	/* setTouchListeners()
+	/* void setTouchListeners()
 	*
 	*  Sets the touch listeners and assigns the appropriate logic to each button
-	*  including setting background colors/setting which button is the currently
+	*  including setting background colors/setting the currently
 	*  selected phone.
 	*/
 	private void setTouchListeners() {
@@ -147,7 +147,7 @@ public class MainActivity extends Activity {
 		});
 	}
 
-	/* setPhoneName()
+	/* void setPhoneName(int currentPhone, String phoneName)
 	*
 	*  Changes a phone button's string.
 	*/
@@ -162,7 +162,7 @@ public class MainActivity extends Activity {
 		}	
 	}
 
-	/* browsePhones()
+	/* void browsePhones(View view)
 	*
 	*  Navigates to the Browse activity.
 	*/
@@ -174,7 +174,7 @@ public class MainActivity extends Activity {
 		startActivityForResult(browseIntent, BROWSE_REQUEST);
 	}
 
-	/* comparePhones()
+	/* void comparePhones(View view)
 	*
 	*  Navigates to the Compare activity.
 	*/
@@ -206,7 +206,11 @@ public class MainActivity extends Activity {
 			}
 		}
 	}
-	
+
+	/* void displayInterstitial()
+	*
+	*  Shows an interstitial ad if it is loaded.
+	*/
 	public void displayInterstitial() {
 		if (interstitial.isLoaded()) {
 			interstitial.show();
