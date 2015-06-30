@@ -1876,9 +1876,9 @@ containing a value of this type.
         public static final int opSysButtons2=0x7f0c001f;
         public static final int phone1Title=0x7f0c003d;
         public static final int phone2Title=0x7f0c003e;
-        public static final int phoneAttribute1=0x7f0c0044;
-        public static final int phoneAttribute2=0x7f0c0046;
         public static final int phoneAttributeName=0x7f0c0045;
+        public static final int phoneData1=0x7f0c0044;
+        public static final int phoneData2=0x7f0c0046;
         public static final int phoneName1=0x7f0c0038;
         public static final int phoneName2=0x7f0c0039;
         public static final int phoneTitlesll=0x7f0c003c;

@@ -49,18 +49,20 @@ SearchView.OnCloseListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_browse);
+		getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#33B5E5")));
 		
 		Intent intent = getIntent();
+
+		//Deserialize the previous Button states so the user doesn't have to toggle them again
 		mButtonManager = (ButtonManager) intent.getSerializableExtra("buttonManager");
-		
+
+		//Initialize and set SearchView Listeners
 		searchView = (SearchView)findViewById(R.id.searchView);
 		searchView.setOnQueryTextListener(this);
 		searchView.setOnCloseListener(this);
 		
 		LinearLayout ll = (LinearLayout)findViewById(R.id.llSearch);
 		listView = (ListView)ll.findViewById(R.id.list);
-		
-		getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#33B5E5")));
 
         TabHost tabHost=(TabHost)findViewById(R.id.tabHost);
         tabHost.setup();
@@ -152,19 +154,17 @@ SearchView.OnCloseListener {
     	setNewButtonManager();
     	Cursor cursor = DBController.searchPhone(query, mButtonManager);
     	
-    	if (cursor == null) { }
-    	
-    	else  {
+    	if (cursor == null) {
+			//nothing
+		} else {
 	        String[] from = new String[] { "Name" };   
 	        int[] to = new int[] { R.id.projectionResult };
 	           
 			SimpleCursorAdapter phones = new SimpleCursorAdapter(this, R.xml.phoneprojection, cursor, from, to, 1);
 			if (query.equals("")) {
 				listView.setAdapter(null);
-			}
-			else {	
+			} else {
 				listView.setAdapter(phones);
-				
 				listView.setOnItemClickListener(new OnItemClickListener() {
 					public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
 					{
@@ -183,7 +183,11 @@ SearchView.OnCloseListener {
 			}
     	}
     }
-    
+
+	/* void setNewButtonManager()
+	 *
+	 * Set the default mButtonManager object to the current state of the buttons
+	 */
     private void setNewButtonManager() {
     	mButtonManager = new ButtonManager(
         	toggleAndroid.isChecked(), toggleiOS.isChecked(), toggleBBOS.isChecked(), 
@@ -195,11 +199,16 @@ SearchView.OnCloseListener {
         	
         	toggleSmall.isChecked(), toggleMedium.isChecked(), toggleLarge.isChecked());
     }
-    
+
+	/* void onBackPressed()
+	 *
+	 * Right now used for saving the state of the buttons so the user does not
+	 * have to press each one again
+	 */
     @Override
     public void onBackPressed() {
     	final int RESULT_BACK = 50;
-    	 setNewButtonManager();
+		setNewButtonManager();
     	
     	Intent intent = new Intent();
 		intent.putExtra("buttonManager", mButtonManager);

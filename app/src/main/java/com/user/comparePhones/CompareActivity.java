@@ -43,28 +43,33 @@ public class CompareActivity extends Activity {
 		if (cursor == null) {
 			//Nothing
 		} else {
-			int numColumns = cursor.getColumnCount();
+			int numAttributes = cursor.getColumnCount();
 			
 			//numColumns - 1 because we don't include ID
-			for (int i = 0; i < numColumns - 1; i++) {
+			for (int i = 0; i < numAttributes - 1; i++) {
 				PhoneAttribute attribute = new PhoneAttribute("N/A", "N/A", "N/A");
 				attributeArray.add(attribute);
 			}
 			
 			int phoneIndex = 0;
-			cursor.moveToPosition(-1);
 			boolean arePhonesInOrder = false;
 			final int NAME_INDEX = 2;
-			
-			while (cursor.moveToNext()) {  			
-				for (int i = 0; i < numColumns - 1; i++) {
+
+			//Initialize the cursor
+			cursor.moveToPosition(-1);
+
+			//This while loop will only loop twice currently, once for each phone.
+			while (cursor.moveToNext()) {
+
+				// This for loop will loop over all the attributes in the database.
+				for (int i = 0; i < numAttributes - 1; i++) {
 					if (phoneIndex == 0) {
 						if (cursor.getString(NAME_INDEX).equals(phoneNames[0])) {
 							arePhonesInOrder = true;
 						}
 						//i+1 because we don't want the first column (the id)
-						attributeArray.get(i).attribute =
-								AttFilter.makeAttPresentable(cursor.getColumnName(i + 1));
+						attributeArray.get(i).setAttribute(
+								AttFilter.makeAttPresentable(cursor.getColumnName(i + 1)));
 					}
 					setAttributes(arePhonesInOrder, phoneIndex, i, cursor.getString(i + 1));
 				}
@@ -73,17 +78,13 @@ public class CompareActivity extends Activity {
 			}
 			cursor.close();
 			
-			//Can be turned into a method
-			int imageRes = getResources().getIdentifier(phone1Uri, "drawable", getPackageName());
-			ImageView phone1ImgView = (ImageView)findViewById(R.id.comparePhoneImg1);
-			Drawable res = getResources().getDrawable(imageRes);
-			phone1ImgView.setImageDrawable(res);
-			
-			imageRes = getResources().getIdentifier(phone2Uri, "drawable", getPackageName());	
-			ImageView phone2ImgView = (ImageView)findViewById(R.id.comparePhoneImg2);
-			res = getResources().getDrawable(imageRes);
-			phone2ImgView.setImageDrawable(res);
-			
+			//Setting phone imgs
+			int imageResPhone1 = getResources().getIdentifier(phone1Uri, "drawable", getPackageName());
+			setPhoneImage(imageResPhone1, 0);
+			int imageResPhone2 = getResources().getIdentifier(phone2Uri, "drawable", getPackageName());
+			setPhoneImage(imageResPhone2, 1);
+
+			//Creating the adapter with the array of attributes
 			AttributeAdapter adapter = new AttributeAdapter(this, attributeArray);
 			
 			// Attach the adapter to a ListView
@@ -92,6 +93,28 @@ public class CompareActivity extends Activity {
 		}
 	}
 
+	/* void setPhoneImage(int imageRes, int phoneIndex)
+	 *
+	 * Sets the phone image by finding the appropriate ImageView and
+	 * setting the drawable.
+	 */
+	private void setPhoneImage(int imageRes, int phoneIndex) {
+		ImageView imageView;
+		if (phoneIndex == 0) {
+			imageView = (ImageView) findViewById(R.id.comparePhoneImg1);
+		} else {
+			imageView = (ImageView) findViewById(R.id.comparePhoneImg2);
+		}
+
+		Drawable res = getResources().getDrawable(imageRes);
+		imageView.setImageDrawable(res);
+	}
+
+	/* void setPhoneUri(boolean arePhonesInOrder, int phoneIndex, String cursorString)
+	 *
+	 * Sets the Phone Uri, involves checking which phone is grabbed first from the database
+	 * so that it can assign the correct image to each phone.
+	 */
 	private void setPhoneUri(boolean arePhonesInOrder, int phoneIndex, String cursorString) {
 		if ((arePhonesInOrder && phoneIndex == 0) || (!arePhonesInOrder && phoneIndex != 0)) {
 			phone1Uri += cursorString;
@@ -100,13 +123,19 @@ public class CompareActivity extends Activity {
 		}
 	}
 
+	/* void setAttributes(boolean arePhonesInOrder, int phoneIndex, int i, String cursorString
+	 *
+	 * Sets the phone data attributes, involves checking which phone is grabbed first from the database
+	 * so that it can assign the correct attributes to each phone.
+ 	 */
 	private void setAttributes(boolean arePhonesInOrder, int phoneIndex, int i, String cursorString) {
 		if ((arePhonesInOrder && phoneIndex == 0) || (!arePhonesInOrder && phoneIndex != 0)) {
-			attributeArray.get(i).data1 =
-					AttFilter.filterChars(cursorString, attributeArray.get(i).attribute);
+			attributeArray.get(i).setData1(AttFilter.filterChars(cursorString,
+					attributeArray.get(i).getAttribute()));
+
 		} else {
-			attributeArray.get(i).data2 =
-					AttFilter.filterChars(cursorString, attributeArray.get(i).attribute);
+			attributeArray.get(i).setData2(AttFilter.filterChars(cursorString,
+					attributeArray.get(i).getAttribute()));
 		}
 	}
 }

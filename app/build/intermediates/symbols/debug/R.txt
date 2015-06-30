@@ -1553,9 +1553,9 @@ int id opSysButtons1 0x7f0c001b
 int id opSysButtons2 0x7f0c001f
 int id phone1Title 0x7f0c003d
 int id phone2Title 0x7f0c003e
-int id phoneAttribute1 0x7f0c0044
-int id phoneAttribute2 0x7f0c0046
 int id phoneAttributeName 0x7f0c0045
+int id phoneData1 0x7f0c0044
+int id phoneData2 0x7f0c0046
 int id phoneName1 0x7f0c0038
 int id phoneName2 0x7f0c0039
 int id phoneTitlesll 0x7f0c003c

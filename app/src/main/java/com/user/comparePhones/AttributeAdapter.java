@@ -36,14 +36,13 @@ public class AttributeAdapter extends ArrayAdapter<PhoneAttribute> {
         TextView tvData1 = (TextView) convertView.findViewById(R.id.phoneData1);
         TextView tvData2 = (TextView) convertView.findViewById(R.id.phoneData2);
 
-        tvAttributeName.setText(attribute.attribute);
-        tvData1.setText(attribute.data1);
-        tvData2.setText(attribute.data2);
+        tvAttributeName.setText(attribute.getAttribute());
+        tvData1.setText(attribute.getData1());
+        tvData2.setText(attribute.getData2());
 
-        //Zebra stripes for the ListView
+        //This block is for zebra striping the Compare ListView
         final int gray = 0xEE363636;
         final int darkGray = 0xEE282828;
-
         if (position % 2 == 0) {
     	    convertView.setBackgroundColor(gray);
         } else {

@@ -2,7 +2,10 @@ package com.user.comparePhones;
 
 import java.util.ArrayList;
 
-//Temp hardcoded
+/* PopPhoneManager
+ *
+ * Temp hardcoded class to populate popular phones.
+ */
 public class PopPhoneManager {
     public static ArrayList<String> getStrings() {
         ArrayList<String> phones = new ArrayList<String>();
