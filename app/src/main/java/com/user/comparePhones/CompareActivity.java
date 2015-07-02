@@ -15,7 +15,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-
+/* CompareActivity
+ *
+ * An activity to compare phones.
+ */
 public class CompareActivity extends Activity {
 	TextView phone1NameHeader;
 	TextView phone2NameHeader;

@@ -2,7 +2,10 @@ package com.user.comparePhones;
 
 import java.io.Serializable;
 
-@SuppressWarnings("serial")
+/* ButtonManager
+ *
+ * A class to transfer button state for the Browse View.
+ */
 public class ButtonManager implements Serializable {
 	boolean isToggledAndroid;
 	boolean isTogglediOS;
