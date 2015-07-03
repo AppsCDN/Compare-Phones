@@ -25,6 +25,8 @@ public class CompareActivity extends Activity {
 	String phone1Uri = "img";
 	String phone2Uri = "img";
 	ArrayList<PhoneAttribute> attributeArray = new ArrayList<PhoneAttribute>();
+	final int PHONE_ONE = 1;
+	final int PHONE_TWO = 2;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
