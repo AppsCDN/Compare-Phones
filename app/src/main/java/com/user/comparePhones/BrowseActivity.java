@@ -19,6 +19,10 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.ToggleButton;
 
+/* BrowseActivity
+*
+*  Activity to display browsed phones
+*/
 public class BrowseActivity extends Activity implements SearchView.OnQueryTextListener,
 SearchView.OnCloseListener {
 	private ListView listView;

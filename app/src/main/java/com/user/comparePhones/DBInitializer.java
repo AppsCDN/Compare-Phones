@@ -15,6 +15,10 @@ import android.util.Log;
 import android.database.Cursor;
 import android.database.SQLException;
 
+/* DBInitializer
+*
+*  Initializes the database for use
+*/
 public class DBInitializer extends SQLiteOpenHelper {
 	
 	private static String TAG = "DBInitalizer";

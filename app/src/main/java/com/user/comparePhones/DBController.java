@@ -5,7 +5,10 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 
-//Meant to be a static class.
+/* DBInitializer
+*
+*  Contains various database functions for use
+*/
 public class DBController {
 	public static SQLiteDatabase phoneDB;
 
