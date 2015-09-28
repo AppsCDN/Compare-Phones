@@ -1,4 +1,4 @@
 # Compare-Phones
 
-An Android app to compare phone specs.
+An android app to compare phone specifications with flat UI design.
 
